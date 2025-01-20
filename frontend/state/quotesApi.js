@@ -8,7 +8,11 @@ export const quotesApi = createApi({
             query: () => 'quotes',
         }),
         createQuote: builder.mutation({
-            
+            query: quote => ({
+                url: 'quotes',
+                method: 'POST',
+                body: quote
+            })
         }),
         toggleQuote: builder.mutation({
 
