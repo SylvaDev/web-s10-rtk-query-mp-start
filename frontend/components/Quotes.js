@@ -29,7 +29,7 @@ export default function Quotes() {
                 <div>{qt.quoteText}</div>
                 <div>{qt.authorName}</div>
                 <div className="quote-buttons">
-                  <button onClick={() => deleteQuote}>DELETE</button>
+                  <button onClick={() => deleteQuote(qt.id)}>DELETE</button>
                   <button onClick={() => dispatch(setHighlightedQuote(qt.id))}>HIGHLIGHT</button>
                   <button onClick ={() => toggleFake({id: qt.id, quote: { apocryphal: !qt.apocryphal }})}>FAKE</button>
                 </div>
